@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library - Main Page</title>
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <script src="scripts/events.js" defer="defer"></script>
+    <script src="scripts/calendar.js" defer="defer"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            var originalSize = $('main').css('font-size'); // reset 
+            $(".resetMe").click(function () {
+                $('main').css('font-size', originalSize);
+            }); // Increase Font Size 
+            $(".increase").click(function () {
+                var currentSize = $('main').css('font-size');
+                var currentSize = parseFloat(currentSize) * 1.2;
+                $('main').css('font-size', currentSize);
+                return false;
+            }); // Decrease Font Size 
+            $(".decrease").click(function () {
+                var currentFontSize = $('main').css('font-size');
+                var currentSize = $('main').css('font-size');
+                var currentSize = parseFloat(currentSize) * 0.8;
+                $('main').css('font-size', currentSize);
+                return false;
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <main>
+        <header class="fixedHeader">
+            <a href="#" class="logo"><img src="images/logo2.jpg" alt="Book logo"></a>
+            <nav>
+                <ul>
+                    <li class="navItem"><a href="index.html">Home</a></li>
+                    <li class="navItem"><a href="books.html">Books</a></li>
+                    <li class="navItem"><a href="shopping.html">Shopping</a></li>
+                    <li class="navItem"><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <span>fonts</span>
+            <input type="button" class="increase" value=" + ">
+            <input type="button" class="decrease" value=" - " />
+            <input type="button" class="resetMe" value=" reset ">
+        </header>
+        <section id="top">
+            <header>
+                <h1>Enjoy ebooks</h1>
+            </header>
+            <h2>
+                through your local public library
+            </h2>
+            <!--Articl1-->
+            <article class="lifestyles">
+                <div class="lifestyles-interstitial">
+                    <div class="l-container">
+                        <div class="lifestyles-interstitial__content">
+                            <h2 class="lifestyles-interstitial__slogan">
+                                Explore, read &amp; shop the books online
+                            </h2>
+                            <a href="books.html" class="btn btn--solid btn--primary">collection</a>
+                        </div>
+                        <div class="content-zone">
+                            <ul class="org-collections " style="display: block; ">
+
+                                <li class="insider " style="z-index: 205; ">
+                                    <div class="type-icon icon-ebook"></div>
+                                    <a href="# "><img src="images/11.jpg " alt="Advanced JavaScript "
+                                            style="max-width: 205px; "></a>
+                                </li>
+
+                                <li class="insider " style="z-index: 221; ">
+                                    <div class="type-icon icon-ebook "></div>
+                                    <a href="# "><img src="images/14.jpg " alt="JavaScript for web developers "
+                                            style="max-width: 221px; "></a>
+                                </li>
+
+                                <li class="insider " style="z-index: 205; ">
+                                    <div class="type-icon icon-audiobook "></div>
+                                    <a href="# "><img src="images/5.jpeg " alt="JavaScript for web developers "
+                                            style="max-width: 205px; "></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="org-header ">
+                <h3>Borrow or Shop the ebooks </h3>
+                <div class="org-findout"><img src="images/org-innovate.png" alt="">
+                    <div class="org-title">Always Innovating</div>
+                </div>
+                <div class="org-findout topper"><img src="images/org-educate.png" alt="">
+                    <div class="org-title">Meet Educational Needs</div>
+                </div>
+                <div class="org-findout"><img src="images/org-discover.png" alt="">
+                    <div class="org-title">Maximize Discoverability</div>
+                </div>
+                <div class="lifestyles-interstitial">
+                    <h3 id="whitefont">
+                        Explore, read &amp; shop the books online
+                    </h3>
+                    <div id="calendar">&nbsp;</div>
+                </div>
+            </article>
+        </section>
+        <div class="push "></div>
+
+        
+        <footer class="site-footer site-footer-container ">
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">E-Book Library</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        <a href="index.html ">Main</a>
+                    </li>
+                    <li>
+                        <a href="books.html ">Books</a>
+                    </li>
+                    <li>
+                        <a href="shopping.html ">shopping</a>
+                    </li>
+                    <li>
+                        <a href="contact.html ">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <h4 class="site-footer__section-heading ">Team Project</h4>
+                <ul class="site-footer__list ">
+                    <li>
+                        Arablou Zahra
+                    </li>
+                    <li>
+                        Parinaz MalekTabrizi
+                    </li>
+                    <li>
+                        Sardaryan Elina
+                    </li>
+                    <li>
+                        Ying Luo
+                    </li>
+
+                </ul>
+            </div>
+            <div class="site-footer__section ">
+                <ul class="site-footer__list certifiedlogo ">
+                    <li>
+                        <a href="http://www.johnabbott.qc.ca/ "><img src="images/john-abbott-college.png "
+                                alt="john-abbott-college "></a>
+                    </li>
+
+                </ul>
+                <small>&copy; JavaScript Project.<br />All Rights Reserved.<br />
+                    <a href="# ">Terms</a> under which this service is provided to you.<br>
+                </small>
+            </div>
+
+        </footer>
+    </main>
+</body>
+
+</html>
